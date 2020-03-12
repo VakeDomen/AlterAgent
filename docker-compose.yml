@@ -20,12 +20,14 @@ services:
       - traefik.http.routers.alter_agent_backend.entrypoints=websecure
       - traefik.http.routers.alter_agent_backend.tls=true
       - traefik.http.routers.alter_agent_backend.tls.certresolver=le
-      - traefik.http.services.alter_agent_backend.loadbalancer.server.port=12000
+      - traefik.http.services.alter_agent_backend.loadbalancer.server.port=3000
   frontend:
     build:
       context: .
       dockerfile: ./dockerfiles/Dockerfile.frontend
     restart: "unless-stopped"
+    networks:
+      - proxy
     labels:
       - traefik.enable=true
       - traefik.http.routers.alter_agent.rule=Host(`${FRONTEND_DOMAIN}`)
