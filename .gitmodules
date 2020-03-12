@@ -1,0 +1,6 @@
+[submodule "AlterAgentBackend"]
+	path = AlterAgentBackend
+	url = https://github.com/VakeDomen/AlterAgentBackend.git
+[submodule "AlterAgentFrontend"]
+	path = AlterAgentFrontend
+	url = https://github.com/VakeDomen/AlterAgentFrontend.git
