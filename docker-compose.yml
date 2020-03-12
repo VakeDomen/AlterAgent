@@ -28,10 +28,10 @@ services:
     restart: "unless-stopped"
     labels:
       - traefik.enable=true
-      - traefik.http.routers.project_board.rule=Host(`${FRONTEND_DOMAIN}`)
-      - traefik.http.routers.project_board.entrypoints=websecure
-      - traefik.http.routers.project_board.tls=true
-      - traefik.http.routers.project_board.tls.certresolver=le
+      - traefik.http.routers.alter_agent.rule=Host(`${FRONTEND_DOMAIN}`)
+      - traefik.http.routers.alter_agent.entrypoints=websecure
+      - traefik.http.routers.alter_agent.tls=true
+      - traefik.http.routers.alter_agent.tls.certresolver=le
 
 networks:
   proxy:
